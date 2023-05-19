@@ -1,0 +1,249 @@
+
+  @font-face {
+        font-family: "NRT-Bd";
+        src: url("NRT-Bd.eot"); /* IE9 Compat Modes */
+        src: url("NRT-Bd.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+            url("NRT-Bd.ttf") format("truetype"), /* Safari, Android, iOS */
+            url("NRT-Bd.woff") format("woff"); /* Modern Browsers */
+        font-weight: normal;
+        font-style: normal;
+        }
+
+          .font_NRT-Bd {
+            font-family: 'NRT-Bd';
+            direction: rtl;
+            font-size: 25px;
+            text-align: right;
+            line-height:1.5;
+        }
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'NRT-Bd';
+}
+
+body{
+  width:97%;
+  height: 120vh;
+  rgb(240,239,243);
+margin: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.container{
+
+width: 100%;
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 4px 4px 30px rgba(0,0,0,0.06);
+	padding: 30px;
+	padding-right: 10px;
+	padding-left: 10px;
+	overflow-y: scroll; 
+}
+
+.container::-webkit-scrollbar{
+display: none;
+}
+
+.container form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+
+
+
+
+.product {
+
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	box-shadow: 4px 4px 30px rgba(0,0,0,0.06);
+	background-color: #ffae00;
+
+}
+
+.product img {
+height: 100px;
+object-fit: cover;
+}
+
+
+.product .p-details h2 {
+font-size: 20px;
+color: #1d1d1d;
+padding-right: 15px;
+}
+
+.product-list{
+
+	padding: 20px;
+	
+}
+
+
+
+
+
+.Search {
+  position: relative;
+  display: flex;
+  font-weight: 300;
+  font-size: 40px;
+  color: #555;
+}
+
+.Search-box {
+  flex: 1 0 auto;
+  margin: 0 5px;
+  padding: 8px 20px;
+  height: 20%;
+  border: 0;
+	box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
+  transition: all .15s ease-in-out;
+  background-color: #8c7ae6;
+  color: white;
+  border-radius: 10px;
+}
+.Search-box:focus {
+  flex: 1 0 90%;
+  margin: 0;
+  outline: 0;
+}
+
+.Search-label {
+  position: absolute;
+  margin-top: -15px;
+  font-size: 40px;
+  transition: all .15s ease-in-out;
+}
+
+.Search-box:focus + .Search-label {
+  transform: translateX(12px);
+}
+
+
+
+:root {
+	--delay: 0;
+	--duration: 5s;
+	--iterations: 1;
+}
+/* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+
+
+.reveal-text,
+.reveal-text::after {
+	animation-delay: var(--animation-delay, 8s);
+	animation-iteration-count: var(--iterations, 4);
+	animation-duration: var(--duration, 2s);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+	--animation-delay: var(--delay, 0);
+	--animation-duration: var(--duration, 2s);
+	--animation-iterations: var(--iterations, 1);
+	animation-name: clip-text;
+	white-space: nowrap;
+	cursor: default;
+	display: block;
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: black;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: text-revealer;
+	}
+	
+}
+
+
+@keyframes clip-text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes text-revealer {
+	
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		transform: scaleX(1);
+	}
+	
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+
+
+
+hr {
+  margin: 1.5em 0;
+  border: none;
+}
+
+hr:before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #eee;
+  margin: 0 0.4em;
+}
+
+hr:after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #eee;
+  margin: 0 0.4em;
+}
+
+.modal {
+	background-color: rgba(255, 255, 255, 0.55);
+	border-radius: 15px;
+  }
+ 
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+	.modal {
+	  background-color: rgba(255, 255, 255, 0.5);
+	  -webkit-backdrop-filter: blur(10px);
+	  backdrop-filter: blur(10px);
+	}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html style="background-color :#8c7ae6">
+
+<head>
+  <meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="answer.css">
+    <link rel="stylesheet" type="text/css" href="answer2.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <title>zemen's answer</title>
+</head>
+<body>
+
+
+
+<div class="receipt" style="text-align: right;" >
+  <div class="receipt-list">
+
+    <div class="receipt-item" style="text-align: right;">
+
+ <div class="receipt-label">ناوی بابەت : </div>
+      <div class="receipt-value">چۆن لووپ لەگەڵ داتایێکی زۆر بەکاردێنیت؟</div>
+
+    <br>
+<hr>
+  <br>
+    <br>
+
+      <div class="receipt-label" style="text-align: right; color: #8c7ae6;">
+
+     مەبەستی ئەم پرسیارە ئەوەیە کە ئەگەر بێت و کۆمەڵێک داتا و ئایدی زۆرت هەبێت 
+     مەسەلەن دەتەوێ ئەڤرێجی دەرەجەی ١٠٠ قوتابی
+     لە مەکتەبێکدا بخەیتە فیلدێکی نوێ بەناوی ئەڤرێجەوە لە تەیبلێک بەناوی ستودێن_مارک ، 
+     کە تەیبلەکە بۆ هەر قوتابیێک دەرەجەی هەر دەرسێکی تێدا دانراوە، ڕەنگە بتوانیت 
+     ڤاریەبلێک دروست بکەیت و بە وایڵ لووپەکە دروست بکەین 
+     وە ڤاڕیەبلەکە ١ تێدا داخل بکەین و بچووکتری بکەین لە ١٠٠ 
+     بەم شێوەیە 
+    <br>
+    <p style="color: coral;">
+    declare i default 1
+  <br>
+<br>
+while i <= 100 do 
+<br> <br>
+update from student_marks
+<br><br>
+set average_mark = (select avg(mark) from student_mark group by student_id )
+<br><br>
+where student_id = i 
+<br><br>
+set i = i+1 
+<br><br>
+end while
+</p>
+
+<br>
+
+ئەمە وەڵامێکی تەواوە بەڵام ئەگەری دروست بوونی کێشەی زۆرە 
+مەسەلەن قوتابیێک ئایدیەکەی ٢٣ ، پێش ەو قوتابیە ئایدی ٢٠ هەبووە
+کەواتە فیلدی ٢١ و ٢٢ بەتاڵن ، ئەمەش ئیررۆر دروستەکات
+یاخود ئەگەر هاتوو لە سیستەمەک لەشوێنی ئایدی
+کۆدی نیشتمانی نەتەوەیەک پێوست بێت لە سیستەمەکە ، ئێ ئەم ئایدیییە لە ١ەوە 
+دەستپێناکات و کۆتایشی دیار نییە
+پێوستمان بە ڕێگەیەکی دیەکەیە بۆ چارەسەر
+
+    <br>
+<br>
+<div class="" style="text-align: right; color: #000;">: وەڵامی ڕاست</div>
+<br><br>
+SET @counter = 1;
+<br><br>
+SET @num_students = (select max(student_id));<br>
+
+<p style="color: coral;">لێرە لە شوێنی ئەوەی خۆمان کۆتا ئایدی بنووسین ، ئەگریگەیت فەنکشنی ماکس بەکاردێنین</p>
+
+<br>
+WHILE @counter <= @num_students DO<br><br>
+
+update from student_marks 
+  <br><br>
+set average_mark = (select avg(marks) ) 
+<br>
+
+<p style="color: coral;">بۆ دۆزینەوەی ئەڤرێجەکە و خستنە ناوەوەی بۆ فیلدی ئەڤرێج 
+فیلدەکە یەکسان دەکەی بەو کلاوسەی کە ئەڤرێج مارکمان بۆ دەدۆزێتەوە 
+بۆ هەر قوتابییەک کە بۆ نموونە لەو تەیبلە 
+دەرەجەی ٣ دەرسی تێدایە 
+هەرسێ دەرسەکە دەرەجەکانیان کۆ دەکرێتەوە دابەش ٣ دەکرێت بۆ هەر قوتابیەک
+
+</p>
+<br>
+where student_id = @counter;
+<br>
+
+<p style="color: coral;">
+
+  لێرەش ئایدیەکە یەکسان دەکەین بە ڤاریەبلی کاونتەر کە لە ١ەوە دەستپێدەکات تا 
+  دەگاتە کۆتا قوتابی 
+</p>
+<br>
+
+  SET @counter = @counter + 1;<br><br>
+END WHILE;
+
+<br><br>
+
+<p style="color: #000;">: ئەنجام</p>
+
+<img src="p103.JPG" style="margin-top: 20px; width: 90%;">
+ <br>
+ <p style="color: #8c7ae6; text-align: center;">لەبەرەوەی دەرەجەی یەک دەرس ئەڤرێجی دەردێت  ،دابەشی ١ی دەکات ئەگریگەیت فەنکشنەکە
+   بۆیە ئەنجامی ئەڤرێجەکە 
+وەک دەرەجەکە دەبێت ، بەڵام ئەگەر دوو دەرسبێت  کۆی هەردوو دەرسەکە دەکات و دابەش دوویان دەکات 
+ئەگریگەیت فەنکشنەکە 
+پاشان ئەنجامەکە دەخاتە ناو فیلدەکەوە ، دەتوانی  بۆ هەر ئایدیێک دەرسێکی تر زیاد بکەیت هەر ئەم کویریەش
+بەکاربێنەوە بۆ دڵنیابوون لە وەڵامەکە</p>
+
+ 
+</div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+  </div>
+  </div>
+<br>
+      
+    <a href="http://zemen.rf.gd/database.html"  style="text-decoration: none;"><div class='button -blue center' style="color: black; background-color: white; width: 70px; text-align: center; border-radius: 5px"><i class="bi bi-arrow-left" style="margin-right: 20px"></i>گەڕانەوە  </div></a>
+
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/643e835731ebfa0fe7f90207/1gua32446';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+</body>
+</html>
